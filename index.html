@@ -14,14 +14,14 @@
 	<link rel="stylesheet" href="deps/ie.css">
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-</head><body><div class="page">
+</head><body vocab="http://schema.org/" typeof="Library"><div class="page">
 
 <header>
 	<nav>
 		<a href="#">Log in/Sign up</a>
 		<a href="#footer">Location/Hours</a>
 	</nav>
-	<h1><a href="#">Niceville Library</a></h1>
+	<h1 property="name"><a href="#">Niceville Library</a></h1>
 	<form id="search"><fieldset><legend>Search Catalog</legend>
 		<label for="searchText"><a href="#">Catalog</a></label><input id="searchText" placeholder="Search books and more" type="search">
 		<input type="submit" value="Search">
@@ -132,23 +132,25 @@
 
 <footer id="footer">
 	<div class="footer-social">
-		<a class="social facebook" href="#" title="Like us on Facebook"></a> 
-		<a class="social twitter" href="#" title="Follow us on Twitter"></a> 
-		<a class="social flickr" href="#" title="Photos on Flickr"></a> 
-		<a class="social youtube" href="#" title="Videos on YouTube"></a>
+		<a class="social facebook" href="#" property="sameAs" title="Like us on Facebook"></a> 
+		<a class="social twitter" href="#" property="sameAs" title="Follow us on Twitter"></a> 
+		<a class="social flickr" href="#" property="sameAs" title="Photos on Flickr"></a> 
+		<a class="social youtube" href="#" property="sameAs" title="Videos on YouTube"></a>
 	</div>
 	<address>
 		<h3>Location/Contact</h3>
-		(555) 555-5555<br />
-		<a href="mailto:hello@nicevillelibrary.org">hello@nicevillelibrary.org</a><br />
-		<a class="loc-map" href="http://www.google.com/maps?q=150+Martin+Lake+Road%2C+St.+Ignace%2C+MI">Niceville Library<br />
-		143 Lucky Hi-way<br />
-		Niceville, USA 12345</a>
+		<span property="telephone">(555) 555-5555</span><br />
+		<a href="mailto:hello@nicevillelibrary.org" property="email">hello@nicevillelibrary.org</a><br />
+		<a class="loc-map" href="http://www.google.com/maps?q=150+Martin+Lake+Road%2C+St.+Ignace%2C+MI" property="">Niceville Library<br />
+        <span property="address" typeof="PostalAddress">
+		    <span property="streetAddress">143 Lucky Hi-way</span><br />
+		    <span property="addressLocality">Niceville</span>, <span property="addressRegion">TN</span><br />
+            <span property="addressCountry">USA</span> <span property="postalCode">12345</span></a>
 	</address>
 	<div class="hours">
 		<h3>Hours</h3>
-		Monday-Friday: 10:00 AM-9:00 PM<br />
-		Saturday &amp; Sunday: Noon-9:00 PM
+		<time property="openingHours" content="Mo-Fr 10:00-21:00">Monday-Friday: 10:00 AM-9:00 PM</time><br />
+		<time property="openingHours" content="Sa-Su 12:00-12:00">Saturday &amp; Sunday: Noon-9:00 PM</time>
 	</div>
 </footer>
 
